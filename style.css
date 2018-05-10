@@ -2,23 +2,28 @@ body{
   width: 100%;
   height:100%;
   margin: 0;
-  background-color: #B8A3A4;
-  font-size: 18px;
+  background-color: #55556b;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
-
+  color:#4E687A;
 }
 
 a{
   text-decoration: none;
+  color: #4E687A;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover{
+  color: #FFF;
 }
 
 h2{
   text-align: center;
-}
-
-i{
-  font-size: 32px;
-  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 p{
@@ -27,6 +32,51 @@ p{
 
 ul{
   list-style-type: none;
+}
+
+.sidebar{
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  padding-bottom: 0;
+  border: 1px solid #FC906B;
+  box-shadow: 0px -8px 20px 3px rgba(252, 144, 107, 0.4);
+
+  background: rgb(252,144,107);
+  background: linear-gradient(90deg, rgba(252,144,107,1) 0%,
+              rgba(255,198,150,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+              rgba(255,198,150,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+              rgba(255,198,150,1) 100%);
+  background: -o-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+              rgba(255,198,150,1) 100%);
+}
+
+.card{
+  border-top: 1px solid #FC906B;
+}
+
+.card .content{
+  display: none;
+}
+
+#open{
+  display: block;
+}
+
+.card:hover{
+  position:relative;
+  top: -10px;
+}
+
+.cardtitle{
+  color: #885E7F;
+  transition: color 0.3s ease-in-out;
+}
+
+.cardtitle:hover{
+  color: #FFF;
 }
 
 .bot{
@@ -38,11 +88,13 @@ ul{
 .bot li{
   float:left;
 }
+.bot i{
+  font-size: 32px;
+  padding: 10px;
+}
 
-.sidebar{
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  padding-bottom: 0;
-  background-color: #FFC696;
+#logo{
+  position:relative;
+  padding: 20px;
+  left: 30px;
 }
