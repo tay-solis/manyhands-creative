@@ -1,3 +1,129 @@
+@media only screen and (max-height: 675px){
+  .bot{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:700px){
+  .sidebar{
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    border: 1px solid #FC906B;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 3px rgba(252, 144, 107, 0.4);
+
+
+    background: rgb(252,144,107);
+    background: linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -o-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+  }
+  .card{
+    float: left;
+    height: 50px;
+  }
+
+  .card-content{
+    text-align: left;
+  }
+
+  h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  img{
+    float:right;
+    content: url("http://res.cloudinary.com/tayjsolis/image/upload/c_scale,w_44/v1522699570/manymanyhandslogosmallwhite.png");
+    padding: 5px;
+  }
+
+  .main{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+  }
+  .contactCard{
+    visibility:collapse;
+  }
+
+  #open{
+    background: rgb(252,144,107);
+    position:absolute;
+    top:50px;
+  }
+
+
+
+
+}
+
+@media only screen and (min-width:700px){
+  h2{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .sidebar{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    padding-bottom: 0;
+    border: 1px solid #FC906B;
+    box-shadow: 0px -8px 20px 3px rgba(252, 144, 107, 0.4);
+
+    background: rgb(252,144,107);
+    background: linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+    background: -o-linear-gradient(90deg, rgba(252,144,107,1) 0%,
+                rgba(255,198,150,1) 100%);
+  }
+  .name{
+    margin-bottom: 6px;
+  }
+  .card:hover{
+    position:relative;
+    top: -10px;
+  }
+
+  .main{
+    position:absolute;
+    left: 300px;
+    float: right;
+    margin-left: 10px;
+    width: 75%;
+  }
+
+  #logo{
+    position:relative;
+    padding: 20px;
+    left: 30px;
+  }
+
+}
+
+
 body{
   width: 100%;
   height:100%;
@@ -6,6 +132,7 @@ body{
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   color:#4E687A;
+  grid-template-columns: 350px auto;
 }
 
 a{
@@ -18,13 +145,15 @@ a:hover{
   color: #FFF;
 }
 
-h2{
+h1{
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 32px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: rgba(252,144,107,1);
 }
+
 
 p{
   text-align: center;
@@ -34,23 +163,28 @@ ul{
   list-style-type: none;
 }
 
-.sidebar{
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  padding-bottom: 0;
-  border: 1px solid #FC906B;
-  box-shadow: 0px -8px 20px 3px rgba(252, 144, 107, 0.4);
+.cardtitle{
+  color: #885E7F;
+  transition: color 0.3s ease-in-out;
+}
 
-  background: rgb(252,144,107);
-  background: linear-gradient(90deg, rgba(252,144,107,1) 0%,
-              rgba(255,198,150,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(252,144,107,1) 0%,
-              rgba(255,198,150,1) 100%);
-  background: -moz-linear-gradient(90deg, rgba(252,144,107,1) 0%,
-              rgba(255,198,150,1) 100%);
-  background: -o-linear-gradient(90deg, rgba(252,144,107,1) 0%,
-              rgba(255,198,150,1) 100%);
+.cardtitle:hover{
+  color: #FFF;
+}
+
+.socialLinks{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.socialLinks li{
+  float:left;
+}
+
+.socialLinks i{
+  font-size: 24px;
+  padding: 10px;
 }
 
 .card{
@@ -63,38 +197,4 @@ ul{
 
 #open{
   display: block;
-}
-
-.card:hover{
-  position:relative;
-  top: -10px;
-}
-
-.cardtitle{
-  color: #885E7F;
-  transition: color 0.3s ease-in-out;
-}
-
-.cardtitle:hover{
-  color: #FFF;
-}
-
-.bot{
-  margin: 0 auto;
-  position: absolute;
-  bottom: 10px;
-}
-
-.bot li{
-  float:left;
-}
-.bot i{
-  font-size: 32px;
-  padding: 10px;
-}
-
-#logo{
-  position:relative;
-  padding: 20px;
-  left: 30px;
 }
